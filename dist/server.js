@@ -27,7 +27,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "525b143bc76b63406fb9"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "bec11fa61155909e45b2"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -943,7 +943,7 @@
 	  value: true
 	});
 	var MESSAGE_FETCH = exports.MESSAGE_FETCH = 'MESSAGE_FETCH';
-	var MESSAGE_STOP_FETCH = exports.MESSAGE_STOP_FETCH = 'MESSAGE_FETCH';
+	var MESSAGE_STOP_FETCH = exports.MESSAGE_STOP_FETCH = 'MESSAGE_STOP_FETCH';
 
 /***/ },
 /* 16 */
@@ -1284,10 +1284,10 @@
 /* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	    value: true
 	});
 	
 	var _react = __webpack_require__(8);
@@ -1296,18 +1296,23 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	var Foo = function Foo() {
-	  return _react2.default.createElement(
-	    'div',
-	    null,
-	    _react2.default.createElement(
-	      'h2',
-	      null,
-	      'Foo'
-	    )
-	  );
+	var Foo = function Foo(_ref) {
+	    var children = _ref.children;
+	    return _react2.default.createElement(
+	        "div",
+	        { className: "Foo" },
+	        _react2.default.createElement(
+	            "h2",
+	            null,
+	            "Foo"
+	        ),
+	        children
+	    );
 	};
 	
+	Foo.propTypes = {
+	    children: _react2.default.PropTypes.any
+	};
 	exports.default = Foo;
 
 /***/ },
