@@ -5,22 +5,12 @@ import {
 	MESSAGE_STOP_FETCH,
 } from './actionTypes';
 
-if (__CLIENT__) {
-	const { protocol, hostname, port } = window.location;
-}
-
 function receiveMessage(message) {
 	return {
 		type: MESSAGE_FETCH,
 		messages: message,
 		isLoading: true
 	};
-}
-
-export function requestMessage() {
-	return {
-		type: MESSAGE_REQUEST
-	}
 }
 
 function stopFetch() {

@@ -27,7 +27,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "c2bc2d19947b2b3ffd29"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "525b143bc76b63406fb9"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -668,7 +668,7 @@
 	
 	var _routes2 = _interopRequireDefault(_routes);
 	
-	var _url = __webpack_require__(26);
+	var _url = __webpack_require__(28);
 	
 	var _url2 = _interopRequireDefault(_url);
 	
@@ -978,6 +978,8 @@
 	
 	var _messageActions = __webpack_require__(20);
 	
+	var _reactRouter = __webpack_require__(10);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1006,6 +1008,29 @@
 	      return _react2.default.createElement(
 	        'div',
 	        null,
+	        _react2.default.createElement(
+	          'header',
+	          null,
+	          'Links:',
+	          ' ',
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: '/' },
+	            'Home'
+	          ),
+	          ' ',
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: '/foo' },
+	            'Foo'
+	          ),
+	          ' ',
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: '/bar' },
+	            'Bar'
+	          )
+	        ),
 	        _react2.default.createElement(
 	          'div',
 	          null,
@@ -1067,7 +1092,6 @@
 	Object.defineProperty(exports, "__esModule", {
 		value: true
 	});
-	exports.requestMessage = requestMessage;
 	exports.fetchMessage = fetchMessage;
 	
 	var _isomorphicFetch = __webpack_require__(21);
@@ -1082,24 +1106,11 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	if (false) {
-		var _window$location = window.location;
-		var protocol = _window$location.protocol;
-		var hostname = _window$location.hostname;
-		var port = _window$location.port;
-	}
-	
 	function receiveMessage(message) {
 		return {
 			type: _actionTypes.MESSAGE_FETCH,
 			messages: message,
 			isLoading: true
-		};
-	}
-	
-	function requestMessage() {
-		return {
-			type: MESSAGE_REQUEST
 		};
 	}
 	
@@ -1209,9 +1220,17 @@
 	
 	var _App2 = _interopRequireDefault(_App);
 	
-	var _Foo = __webpack_require__(25);
+	var _Home = __webpack_require__(25);
+	
+	var _Home2 = _interopRequireDefault(_Home);
+	
+	var _Foo = __webpack_require__(26);
 	
 	var _Foo2 = _interopRequireDefault(_Foo);
+	
+	var _Bar = __webpack_require__(27);
+	
+	var _Bar2 = _interopRequireDefault(_Bar);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -1225,12 +1244,44 @@
 		_react2.default.createElement(
 			_reactRouter.Route,
 			{ component: _App2.default },
-			_react2.default.createElement(_reactRouter.Route, { path: '/', component: _Foo2.default })
+			_react2.default.createElement(_reactRouter.Route, { path: '/', component: _Home2.default }),
+			_react2.default.createElement(_reactRouter.Route, { path: 'foo', component: _Foo2.default }),
+			_react2.default.createElement(_reactRouter.Route, { path: 'bar', component: _Bar2.default })
 		)
 	);
 
 /***/ },
 /* 25 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _react = __webpack_require__(8);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var Home = function Home() {
+	  return _react2.default.createElement(
+	    'div',
+	    null,
+	    _react2.default.createElement(
+	      'h2',
+	      null,
+	      'Home'
+	    )
+	  );
+	};
+	
+	exports.default = Home;
+
+/***/ },
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1260,7 +1311,37 @@
 	exports.default = Foo;
 
 /***/ },
-/* 26 */
+/* 27 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _react = __webpack_require__(8);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var Bar = function Bar() {
+	  return _react2.default.createElement(
+	    'div',
+	    null,
+	    _react2.default.createElement(
+	      'h2',
+	      null,
+	      'Bar'
+	    )
+	  );
+	};
+	
+	exports.default = Bar;
+
+/***/ },
+/* 28 */
 /***/ function(module, exports) {
 
 	module.exports = require("url");

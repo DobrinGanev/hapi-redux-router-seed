@@ -22,7 +22,6 @@ ReactDOM.render(
     reactRoot
 )
 
-
 /**
  * Detect whether the server-side render has been discarded due to an invalid checksum.
  */

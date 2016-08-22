@@ -9,8 +9,8 @@
 6 silly lifecycle hapi-universal-redux@1.1.1~prewatch-server-start: no script for prewatch-server-start, continuing
 7 info lifecycle hapi-universal-redux@1.1.1~watch-server-start: hapi-universal-redux@1.1.1
 8 verbose lifecycle hapi-universal-redux@1.1.1~watch-server-start: unsafe-perm in lifecycle true
-9 verbose lifecycle hapi-universal-redux@1.1.1~watch-server-start: PATH: /usr/lib/node_modules/npm/bin/node-gyp-bin:/home/dobrin/appdirect/node_modules/.bin:/usr/bin:/usr/lib/node_modules/npm/bin/node-gyp-bin:/home/dobrin/appdirect/node_modules/.bin:/usr/bin:/usr/local/heroku/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
-10 verbose lifecycle hapi-universal-redux@1.1.1~watch-server-start: CWD: /home/dobrin/appdirect
+9 verbose lifecycle hapi-universal-redux@1.1.1~watch-server-start: PATH: /usr/lib/node_modules/npm/bin/node-gyp-bin:/home/dobrin/hapi-redux-router-seed/node_modules/.bin:/usr/bin:/usr/lib/node_modules/npm/bin/node-gyp-bin:/home/dobrin/hapi-redux-router-seed/node_modules/.bin:/usr/bin:/usr/local/heroku/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+10 verbose lifecycle hapi-universal-redux@1.1.1~watch-server-start: CWD: /home/dobrin/hapi-redux-router-seed
 11 silly lifecycle hapi-universal-redux@1.1.1~watch-server-start: Args: [ '-c',
 11 silly lifecycle   'node node_modules/just-wait --pattern "dist/*.js" && npm run start' ]
 12 silly lifecycle hapi-universal-redux@1.1.1~watch-server-start: Returned: code: 1  signal: null
@@ -26,7 +26,7 @@
 14 verbose stack     at maybeClose (internal/child_process.js:850:16)
 14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:215:5)
 15 verbose pkgid hapi-universal-redux@1.1.1
-16 verbose cwd /home/dobrin/appdirect
+16 verbose cwd /home/dobrin/hapi-redux-router-seed
 17 error Linux 3.19.0-64-generic
 18 error argv "/usr/bin/nodejs" "/usr/bin/npm" "run" "watch-server-start"
 19 error node v5.12.0

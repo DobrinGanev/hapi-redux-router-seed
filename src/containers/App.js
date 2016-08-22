@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { fetchMessage } from '../actions/messageActions';
+import { Link, browserHistory } from 'react-router'
 export class App extends Component {
   constructor(props) {
     super(props);
@@ -11,14 +12,22 @@ export class App extends Component {
 
   render() {
     return (
-      <div>
-        <div>
-          <h2>App</h2>
-          {this.props.children}
-        </div>
-
-        <p>Loading : {this.props.isLoading.toString()}</p>
-      </div>
+          <div>
+            <header>
+              Links:
+              {' '}
+              <Link to="/">Home</Link>
+              {' '}
+              <Link to="/foo">Foo</Link>
+              {' '}
+              <Link to="/bar">Bar</Link>
+            </header>
+            <div>
+              <h2>App</h2>
+              {this.props.children}
+            </div>
+            <p>Loading : {this.props.isLoading.toString()}</p>
+          </div>
     );
   }
 }
